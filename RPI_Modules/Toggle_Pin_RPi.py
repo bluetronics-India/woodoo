@@ -1,7 +1,9 @@
 import RPi.GPIO as GPIO
 import re
 
-WORDS = ["TURN", "PIN"]
+WORDS = ["TURN", "PIN","ON","OFF"]
+values = ['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty']
+WORDS.extend(values)
 
 def handle(text, mic, profile):
 
@@ -18,7 +20,6 @@ def handle(text, mic, profile):
     mic.say("Which Pin?")
 
     result = mic.activeListen()
-    values = ['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty']
 
     result = values.index(result)
 
