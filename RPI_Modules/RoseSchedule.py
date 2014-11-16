@@ -1,14 +1,10 @@
 # -*- coding: utf-8-*-
 import random
 import re
-import datetime
 
 WORDS = ["ROSE", "SCHEDULE"]
 
-
 PRIORITY = 5
-
-Eastern  = USTimeZone(-5, "Eastern",  "EST", "EDT")
 
 blockTimes = []
 earlyResponse = "Classes haven't started yet today"

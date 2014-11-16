@@ -26,7 +26,7 @@ def handle(text, mic, profile):
 
     if(result=="ON"):
         GPIO.output(pin,GPIO.HIGH)
-    else
+    else:
         GPIO.output(pin,GPIO.LOW)
 
 def isValid(text):
