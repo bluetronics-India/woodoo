@@ -1,3 +1,3 @@
 #!/bin/bash
-JasperLoc = `find -maxdepth 1 -type d -name 'jasper'| head -n1`/client/module
-cp /RPI_Modules/*  JasperLoc
+JasperLoc=`find / 2>/dev/null -type d -name 'jasper'`/client/module
+cp RPI_Modules/*  JasperLoc
