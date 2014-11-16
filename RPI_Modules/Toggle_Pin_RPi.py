@@ -12,11 +12,6 @@ def handle(text, mic, profile):
     else:
         result = "OFF"
 
-    WC = WordConverter()
-
-    split = text.split(" ")
-
-    pin = WC.convertToInteger(pin)
     mic.say("Which Pin?")
 
     result = mic.activeListen()
