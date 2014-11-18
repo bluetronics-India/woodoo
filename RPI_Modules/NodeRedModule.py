@@ -11,13 +11,8 @@ def handle(text, mic, profile):
 Always runs and always writes file to disk
 '''
 
-	value = 0
-	fName = location+"/tempFile"+str(value)
-	while(not os.path.isfile(fName)):
-		value+=1
-		fName = location+"/tempFile"+str(value)
-
-	f = open(fName)
+	fName = location+"/logFile.txt"
+	f = open(fName,"w")
 	f.write(text)
 	f.close()
 
