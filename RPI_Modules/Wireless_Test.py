@@ -28,7 +28,7 @@ def handle(text, mic, profile):
 
 
 	ser = serial.Serial('/dev/ttyAMA0',9600)
-	ser.write(unicode(r)
+	ser.write(unicode(r))
 
 def isValid(text):
     return bool(re.search(r'\bRED\b', text, re.IGNORECASE)) or bool(re.search(r'\bBLUE\b', text, re.IGNORECASE)) or bool(re.search(r'\bGREEN\b', text, re.IGNORECASE))
