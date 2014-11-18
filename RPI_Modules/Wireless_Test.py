@@ -1,7 +1,6 @@
 import re
-import os
 import serial
-
+//Some comments
 WORDS = ["RED","GREEN","BLUE","ONE","ZERO"]
 
 def handle(text, mic, profile):
