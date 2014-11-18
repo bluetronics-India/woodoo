@@ -21,13 +21,10 @@ def handle(text, mic, profile):
 	else:
 		break
 
-	r = ""
-	for i in range(8):
-		r+=str(txt)+str(e)
-
-
 	ser = serial.Serial('/dev/ttyAMA0',9600)
-	ser.write(unicode(r))
+	ser.write(txt)
+	time.sleep(0.050)
+	ser.write(e)
 
 def isValid(text):
     return bool(re.search(r'\bRED\b', text, re.IGNORECASE)) or bool(re.search(r'\bBLUE\b', text, re.IGNORECASE)) or bool(re.search(r'\bGREEN\b', text, re.IGNORECASE))
